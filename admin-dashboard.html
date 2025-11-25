@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="s.css">
+    <link rel="stylesheet" href="script.js">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard - Student Feedback System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card-large">
+    <h1>Admin Feedback Panel</h1>
+    <p class="subtitle">
+        Here the admin/teacher can view and manage all feedback submitted by students.
+    </p>
+
+    <table class="feedback-table">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Student Name</th>
+            <th>Roll No.</th>
+            <th>Course</th>
+            <th>Semester</th>
+            <th>Teacher</th>
+            <th>Subject</th>
+            <th>Rating</th>
+            <th>Feedback</th>
+            <th>Submitted At</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody id="adminFeedbackBody">
+        <!-- JS will fill rows here -->
+        </tbody>
+    </table>
+
+    <div class="btn-group" style="margin-top:18px;">
+        <a href="index.html" class="btn outline">Logout / Back to Home</a>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+    window.addEventListener("DOMContentLoaded", loadAdminTable);
+</script>
+</body>
+</html>

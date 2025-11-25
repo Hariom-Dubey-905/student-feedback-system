@@ -1,0 +1,219 @@
+/* ========= Global Reset ========= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ========= Body / Background ========= */
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #4f8df5 0, #1b2845 45%, #050816 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222;
+    padding: 20px;
+}
+
+/* ========= Common Card Styles ========= */
+.center-card,
+.card-large {
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 16px;
+    padding: 26px 28px 30px;
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(255, 255, 255, 0.6);
+    max-width: 430px;
+    width: 100%;
+    text-align: center;
+}
+
+.card-large {
+    max-width: 900px;
+    text-align: left;
+}
+
+/* ========= Headings / Titles ========= */
+h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #20233a;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #666c80;
+    margin-bottom: 20px;
+}
+
+/* ========= Form ========= */
+.form {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.form label {
+    display: block;
+    font-size: 14px;
+    color: #33374a;
+    margin-bottom: 5px;
+}
+
+.form input,
+.form select,
+.form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #cdd2f0;
+    background: #f7f8ff;
+    font-size: 14px;
+    outline: none;
+    margin-bottom: 14px;
+    transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+    border-color: #3457ff;
+    background: #ffffff;
+    box-shadow: 0 0 0 2px rgba(52, 87, 255, 0.18);
+}
+
+.form textarea {
+    resize: vertical;
+}
+
+/* ========= Rating ========= */
+.rating-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    margin-bottom: 14px;
+    font-size: 13px;
+}
+
+.rating-row label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* ========= Button Group ========= */
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+/* ========= Buttons ========= */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 22px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    min-width: 130px;
+    transition: 0.2s ease;
+}
+
+/* Primary Button */
+.btn.primary {
+    background: linear-gradient(135deg, #3457ff, #6a8dff);
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn.primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.3);
+}
+
+/* Outline Button */
+.btn.outline {
+    background: transparent;
+    border: 1px solid #3457ff;
+    color: #3457ff;
+}
+
+.btn.outline:hover {
+    background: #3457ff;
+    color: #fff;
+}
+
+/* Secondary Button */
+.btn.secondary {
+    background: #ffc947;
+    color: #5b4100;
+}
+
+.btn.secondary:hover {
+    background: #f3b325;
+}
+
+/* ========= Text ========= */
+.center-card p {
+    font-size: 14px;
+    color: #555a70;
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+/* ========= Feedback Table (Admin Page) ========= */
+.feedback-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-top: 12px;
+    background: #f6f7ff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.feedback-table thead {
+    background: #3457ff;
+    color: #fff;
+}
+
+.feedback-table th,
+.feedback-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #dde1ff;
+    text-align: left;
+    vertical-align: top;
+}
+
+.feedback-table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+/* ========= Responsive ========= */
+@media (max-width: 768px) {
+    .center-card,
+    .card-large {
+        padding: 20px 18px 22px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    .feedback-table {
+        font-size: 12px;
+    }
+
+    body {
+        padding: 12px;
+    }
+}

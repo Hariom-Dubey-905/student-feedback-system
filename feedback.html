@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="s.css">
+    <link rel="stylesheet" href="script.js">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Form - Student Feedback System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card-large">
+    <h1>Feedback Form</h1>
+    <p class="subtitle">Please fill the feedback honestly and carefully.</p>
+
+    <form class="form" onsubmit="return handleFeedbackSubmit(event)">
+
+        <!-- TEACHER + OTHER NAME -->
+        <label>Teacher Name</label>
+        <select name="teacher" id="teacherSelect" required onchange="showOtherTeacher()">
+            <option disabled selected>-- Select Teacher --</option>
+            <option>Mr. Abhishek Verma</option>
+            <option>Ms. Neetu Dixit</option>
+            <option>Other</option>
+        </select>
+
+        <!-- yeh box sirf "Other" par dikhega -->
+        <div id="otherTeacherBox" style="display:none; margin-top:10px;">
+            <label>Enter Teacher Name</label>
+            <input type="text" id="otherTeacherInput" placeholder="Enter teacher name">
+        </div>
+
+        <!-- SUBJECT -->
+        <label>Subject</label>
+        <input type="text" name="subject" required>
+
+        <!-- RATING -->
+        <label>Rating</label>
+        <div class="rating-row">
+            <label><input type="radio" name="rate" value="1" required> 1 - Poor</label>
+            <label><input type="radio" name="rate" value="2"> 2 - Fair</label>
+            <label><input type="radio" name="rate" value="3"> 3 - Good</label>
+            <label><input type="radio" name="rate" value="4"> 4 - Very Good</label>
+            <label><input type="radio" name="rate" value="5"> 5 - Excellent</label>
+        </div>
+
+        <!-- FEEDBACK TEXT -->
+        <label>Feedback</label>
+        <textarea name="feedback" rows="4" required></textarea>
+
+        <div class="btn-group">
+            <button type="submit" class="btn primary">Submit Feedback</button>
+            <a href="student-dashboard.html" class="btn outline">Back to Dashboard</a>
+        </div>
+    </form>
+</div>
+
+<script src="script.js"></script>
+<script>
+    function showOtherTeacher() {
+        const select = document.getElementById("teacherSelect");
+        const otherBox = document.getElementById("otherTeacherBox");
+
+        if (select.value === "Other") {
+            otherBox.style.display = "block";
+        } else {
+            otherBox.style.display = "none";
+            document.getElementById("otherTeacherInput").value = "";
+        }
+    }
+</script>
+</body>
+</html>

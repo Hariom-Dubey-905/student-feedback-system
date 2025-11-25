@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="s.css">
+    <link rel="stylesheet" href="script.js">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login - Student Feedback System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="center-card">
+    <h1>Admin Login</h1>
+    <p class="subtitle">Only authorized faculty/admin can access feedback records.</p>
+
+    <form class="form" onsubmit="return adminLogin(event)">
+        <label for="adminUser">Username</label>
+        <input type="text" id="adminUser" placeholder="Enter admin username" required>
+
+        <label for="adminPass">Password</label>
+        <input type="password" id="adminPass" placeholder="Enter password" required>
+
+        <button type="submit" class="btn primary">Login</button>
+
+        <p style="margin-top:10px;font-size:12px;color:#666;">
+            (Use username: <b>rbmi1996</b> and password: <b>rbmign1996</b>)
+        </p>
+
+        <div class="btn-group" style="margin-top:10px;">
+            <a href="index.html" class="btn outline">Back to Home</a>
+        </div>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

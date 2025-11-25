@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="s.css">
+    <link rel="stylesheet" href="script.js">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Login - Student Feedback System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="center-card">
+    <h1>Student Login</h1>
+    <p class="subtitle">Enter your details to proceed to feedback.</p>
+
+    <form class="form" onsubmit="return handleStudentLogin(event)">
+
+        <label>Student Name</label>
+        <input type="text" name="name" required>
+
+        <label>Course</label>
+        <input type="text" name="course" required>
+
+        <label>Semester</label>
+        <select name="semester" required>
+            <option disabled selected>-- Select Semester --</option>
+            <option>1st Semester</option>
+            <option>2nd Semester</option>
+            <option>3rd Semester</option>
+            <option>4th Semester</option>
+            <option>5th Semester</option>
+            <option>6th Semester</option>
+        </select>
+
+        <label>Roll Number</label>
+        <input type="text" name="roll" required>
+
+        <button type="submit" class="btn primary">Login</button>
+
+        <div class="btn-group" style="margin-top:14px;">
+            <a href="index.html" class="btn outline">Back to Home</a>
+        </div>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
